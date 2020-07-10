@@ -1,0 +1,10 @@
+.card-login{
+  display: flex;
+  justify-content: center;
+  padding: 120px;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+}
