@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'ed-product-add',
@@ -7,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductAddComponent implements OnInit {
 
+
+  form: FormGroup = new FormGroup({
+    title: new FormControl(''),
+    brand: new FormControl(''),
+    price: new FormControl(''),
+    saleprice: new FormControl(''),
+    thumImage: new FormControl(''),
+  })
   constructor() { }
 
   ngOnInit(): void {
