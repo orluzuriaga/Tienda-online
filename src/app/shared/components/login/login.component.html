@@ -23,12 +23,8 @@
     </mat-card-content>
     <mat-card-actions class="contenedor">
       <button mat-raised-button color="primary" (click)="Enviar()" >
-        Login
+        Enviar
       </button>
     </mat-card-actions>
   </mat-card>
-</div>
-
-<div *ngIf="form.get('username').getError('required')" class="alert alert-danger">
-    Es necesario especificar un usuario valido.
 </div>

@@ -11,9 +11,10 @@ import { User } from '../../models/user';
 export class LoginComponent implements OnInit {
 
 
+  //Formulario reactivo
   form:FormGroup = new FormGroup({
     username: new FormControl(null,Validators.required),
-    password: new FormControl(null,[Validators.required, Validators.minLength(8)])
+    password: new FormControl(null,Validators.required)
   })
 
 
@@ -25,17 +26,23 @@ export class LoginComponent implements OnInit {
   }
 
   Enviar(){
-
     if(this.form.valid){
       console.log(`Enviando formulario ${this.form.valid}`)
       this.validateLogin(this.form.value)
     }
   }
 
+
+  //Valida las credenciales del usuario
   private validateLogin(user:User){
+    //Valida al usuario, si este es correcto lo redirecciona
     if(user.username === 'admin' && user.password === 'admin'){
        this.router.navigate(['']);
+       console.log(this.form.value)
+    }else{
+      console.error('Credenciales incorrectas')
     }
+
   }
 
 }
