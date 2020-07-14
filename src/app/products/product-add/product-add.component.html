@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>Add new Product</mat-card-title>
-  <img mat-card-image src="">
+  <img mat-card-image [src]="form.value.thumbImage">
 
   <mat-card-content>
     <form [formGroup]="form">
@@ -17,13 +17,13 @@
         <input type="text" matInput placeholder="Sale Price" formControlName="salePrice">
       </mat-form-field>
       <mat-form-field>
-        <input type="text" matInput placeholder="Thumb Image URL" formControlName="thumImage">
+        <input type="text" matInput placeholder="Thumb Image URL" formControlName="thumbImage">
       </mat-form-field>
     </form>
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary">Add</button>
-    <button mat-raised-button>Cancel</button>
+    <button (click)="submit()" mat-raised-button color="primary">Add</button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
   </mat-card-actions>
 </mat-card>
