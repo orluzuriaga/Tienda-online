@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ProductsService } from '../shared/services/products.service';
 
@@ -18,7 +19,7 @@ export class ProductAddComponent implements OnInit {
     saleprice: new FormControl(''),
     thumbImage: new FormControl(''),
   })
-  constructor(private service:ProductsService, private router:Router) { }
+  constructor(private service:ProductsService, private router:Router, private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +32,10 @@ export class ProductAddComponent implements OnInit {
       console.log(`Going to save ${product}`)
       this.service.add(product).subscribe( result => {
         console.log('El producto ha sido añadido')
+        this.router.navigate([''])
+        this.snackBar.open('Producto añadido con exito','Close', {
+          duration:3000
+        } );
       })
     }else{
       console.error('Error al añadir el produto')
