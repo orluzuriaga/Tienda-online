@@ -7,6 +7,7 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
 import { MaterialModule } from '../shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ProductAddComponent } from './product-add/product-add.component';
     CommonModule,
     ProductsRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductsModule { }
