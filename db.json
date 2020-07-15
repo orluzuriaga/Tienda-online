@@ -1,13 +1,12 @@
 {
   "products": [
     {
-      "salePrice": 13.96,
-      "price": 19.99,
-      "title": "Bell Accent Colorblock Beanie",
-      "url": "https://www.forever21.com/us/shop/catalog/product/f21/acc/2000314834",
+      "title": "Bell Accent Colorblock Beanie 2",
       "brand": "Acme",
-      "id": "2000314834",
-      "thumbImage": "https://www.forever21.com/images/1_front_330/00314834-02.jpg"
+      "price": 19.99,
+      "salePrice": 13.96,
+      "thumbImage": "https://www.forever21.com/images/1_front_330/00314834-02.jpg",
+      "id": "2000314834"
     },
     {
       "salePrice": 10.96,
@@ -91,7 +90,7 @@
       "thumbImage": "https://www.forever21.com/images/1_front_330/00240494-02.jpg"
     },
     {
-      "title": "Gorro Negro de Felpa",
+      "title": "Gorro Negro de Felpa 2",
       "brand": "ACC",
       "price": "50.99",
       "salePrice": "50.99",
@@ -99,13 +98,12 @@
       "id": "2000228085"
     },
     {
-      "salePrice": 7,
-      "price": 12.99,
-      "title": "Marled Pom Pom Beanie",
-      "url": "https://www.forever21.com/us/shop/catalog/product/f21/acc/2000391080",
+      "title": "Marled Pom Pom Beanie 3",
       "brand": "ACC",
-      "id": "2000391080",
-      "thumbImage": "https://www.forever21.com/images/1_front_330/00391080-01.jpg"
+      "price": 12.99,
+      "salePrice": 7,
+      "thumbImage": "https://www.forever21.com/images/1_front_330/00391080-01.jpg",
+      "id": "2000391080"
     },
     {
       "salePrice": 19.99,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../shared/services/products.service';
 
@@ -21,8 +22,10 @@ export class ProductEditComponent implements OnInit {
 
   id:String
 
-  constructor(private router:Router, private activatedRouter: ActivatedRoute,
-      private service:ProductsService) { }
+  constructor(private router:Router,
+      private activatedRouter: ActivatedRoute,
+      private service:ProductsService,
+      private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
     //Capturamo la ruta de nuestro elemento a editar, snapshot representa la ruta
@@ -33,6 +36,7 @@ export class ProductEditComponent implements OnInit {
     .subscribe(producto =>{
       console.log(producto);
       this.form.patchValue(producto)
+
     });
 
 
@@ -48,8 +52,13 @@ export class ProductEditComponent implements OnInit {
       this.service.update(product)
       .subscribe(result =>{
         console.log(`Datos enviados correctamente ${product.id}  y con resultado ${result}`)
+        this.router.navigate(['/productos']);
+        this.snackBar.open('Producto actualizado correctamente', 'Close', {
+          duration:3000
+        })
       })
     }
+
   }
 
   cancel(){
