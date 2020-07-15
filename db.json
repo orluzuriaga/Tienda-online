@@ -64,13 +64,13 @@
       "thumbImage": "https://www.forever21.com/images/1_front_330/00401298-02.jpg"
     },
     {
-      "salePrice": 12.9,
-      "price": 12.9,
-      "title": "Coca-Cola Graphic Dad Cap",
-      "url": "https://www.forever21.com/us/shop/catalog/product/f21/acc/2000276396",
+      "salePrice": 100.96,
+      "price": 199.9,
+      "title": "Prueb",
+      "url": "https://www.forever21.com/us/shop/catalog/product/f21/acc/2000313354",
       "brand": "ACC",
-      "id": "2000276396",
-      "thumbImage": "https://www.forever21.com/images/1_front_330/00276396-01.jpg"
+      "thumbImage": "https://www.forever21.com/images/1_front_330/00313354-02.jpg",
+      "id": "2000276396"
     },
     {
       "salePrice": 24.99,
@@ -91,13 +91,12 @@
       "thumbImage": "https://www.forever21.com/images/1_front_330/00240494-02.jpg"
     },
     {
-      "salePrice": 5,
-      "price": 5,
-      "title": "Cable Knit Pom Pom Beanie",
-      "url": "https://www.forever21.com/us/shop/catalog/product/f21/acc/2000228085",
+      "title": "Gorro Negro de Felpa",
       "brand": "ACC",
-      "id": "2000228085",
-      "thumbImage": "https://www.forever21.com/images/1_front_330/00228085-01.jpg"
+      "price": "50.99",
+      "salePrice": "50.99",
+      "thumbImage": "https://www.forever21.com/images/1_front_330/00228085-01.jpg",
+      "id": "2000228085"
     },
     {
       "salePrice": 7,

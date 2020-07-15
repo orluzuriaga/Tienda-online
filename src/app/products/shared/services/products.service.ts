@@ -14,10 +14,22 @@ export class ProductsService {
   constructor(private httpClient:HttpClient) { }
 
   getAll(): Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${PRODUCTO_URL}`)
+    return this.httpClient.get<Product[]>(`${PRODUCTO_URL}`);
   }
 
   add(product:Product): Observable<Product>{
     return this.httpClient.post<Product>(`${PRODUCTO_URL}`, product);
+  }
+
+
+  getProduct(id:String):Observable<Product>{
+    return this.httpClient.get<Product>(`${PRODUCTO_URL}/${id}`);
+
+  }
+
+
+  update(product:Product):Observable<Product>{
+    return this.httpClient.put<Product>(`${PRODUCTO_URL}/${product.id}`, product);
+
   }
 }
