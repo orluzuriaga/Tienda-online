@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../shared/models/product';
 import { ProductsService } from '../shared/services/products.service';
 
 @Component({
@@ -12,20 +13,16 @@ import { ProductsService } from '../shared/services/products.service';
 export class ProductEditComponent implements OnInit {
 
 
-  form: FormGroup = new FormGroup({
-    title: new FormControl(''),
-    brand: new FormControl(''),
-    price: new FormControl(''),
-    salePrice: new FormControl(''),
-    thumbImage: new FormControl(''),
-  })
 
-  id:String
+
+  id:string
+  product:Product
 
   constructor(private router:Router,
       private activatedRouter: ActivatedRoute,
       private service:ProductsService,
       private snackBar:MatSnackBar) { }
+
 
   ngOnInit(): void {
     //Capturamo la ruta de nuestro elemento a editar, snapshot representa la ruta
@@ -35,7 +32,7 @@ export class ProductEditComponent implements OnInit {
     this.service.getProduct(this.id)
     .subscribe(producto =>{
       console.log(producto);
-      this.form.patchValue(producto)
+      this.product = producto
 
     });
 
@@ -44,21 +41,17 @@ export class ProductEditComponent implements OnInit {
 
 
   submit(){
-    //Comprobamos si el producto es valido
-    if(this.form.valid){
-      let product = this.form.value;
-      product.id = this.id;
+    let product =  this.product;
+    product.id = this.id
 
-      this.service.update(product)
-      .subscribe(result =>{
-        console.log(`Datos enviados correctamente ${product.id}  y con resultado ${result}`)
-        this.router.navigate(['/productos']);
-        this.snackBar.open('Producto actualizado correctamente', 'Close', {
-          duration:3000
-        })
+    this.service.update(product)
+    .subscribe(result =>{
+      console.log(`Datos enviados correctamente ${product.id}  y con resultado ${result}`)
+      this.router.navigate(['/productos']);
+      this.snackBar.open('Producto actualizado correctamente', 'Close', {
+        duration:3000
       })
-    }
-
+    })
   }
 
   cancel(){
