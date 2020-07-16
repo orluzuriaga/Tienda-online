@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { RouterModule } from '@angular/router';
 import { ProductsModule } from '../products/products.module';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+
 
 
 
 @NgModule({
-  declarations: [LoginComponent, ToolbarComponent],
+  declarations: [LoginComponent, ToolbarComponent, ConfirmDialogComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -18,7 +20,9 @@ import { ProductsModule } from '../products/products.module';
     RouterModule,
   ],
   exports:[
-    ToolbarComponent
-  ]
+    ToolbarComponent,
+    ConfirmDialogComponent
+  ],
+  entryComponents: [ConfirmDialogComponent]
 })
 export class SharedModule { }
