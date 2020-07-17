@@ -9,6 +9,8 @@
           <mat-form-field appearance="legacy">
             <mat-label>Correo Electronico </mat-label>
             <input matInput placeholder="Correo electrócnio" formControlName="username">
+            <mat-error *ngIf="form.get('username').invalid && (form.get('username').dirty
+            || form.get('username').touched)"> Username is required</mat-error>
             <mat-icon matSuffix>email</mat-icon>
          </mat-form-field>
         </p>
@@ -16,13 +18,17 @@
           <mat-form-field appearance="legacy">
             <mat-label>Contraseña</mat-label>
             <input matInput placeholder="Contraseña" formControlName="password">
+            <mat-error *ngIf="form.get('username').invalid && (form.get('username').dirty
+            || form.get('username').touched)"> Password is required</mat-error>
             <mat-icon matSuffix>vpn_key</mat-icon>
          </mat-form-field>
         </p>
       </form>
     </mat-card-content>
     <mat-card-actions class="contenedor">
-      <button mat-raised-button color="primary" (click)="Enviar()" >
+      <button mat-raised-button color="primary"
+            [disabled]="form.invalid"
+            (click)="Enviar()" >
         Enviar
       </button>
     </mat-card-actions>
