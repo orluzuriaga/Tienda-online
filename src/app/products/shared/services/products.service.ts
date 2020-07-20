@@ -32,9 +32,12 @@ export class ProductsService {
     return this.httpClient.put<Product>(`${PRODUCTO_URL}/${product.id}`, product);
 
   }
-
+// 
 
   delete(id:string):Observable<Product>{
     return this.httpClient.delete<Product>(`${PRODUCTO_URL}/${id}`)
   }
+
+
+
 }
