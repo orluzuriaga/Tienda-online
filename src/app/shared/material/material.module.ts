@@ -43,6 +43,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -55,7 +56,8 @@ import {MatTreeModule} from '@angular/material/tree';
     MatMenuModule,
     MatIconModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatInputModule,
@@ -66,7 +68,8 @@ import {MatTreeModule} from '@angular/material/tree';
     MatMenuModule,
     MatIconModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }
