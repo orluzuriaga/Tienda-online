@@ -3,7 +3,7 @@
 ### Edteam (Proyecto fin de curso)
 
 ### Objetivo: 
-      Crear una página web utilizando las tecnologías aprendidas en el curso.
+Crear una página web utilizando las tecnologías aprendidas en el curso.
 ### Función:  
 Aplicativo, basado en una Tienda Online, construido en Angular 8 y Angular Material, con  formularios reactivos, Cards, comunicación entre componente, creación de servicios HttpClient, para consumir  una Api Rest.
 
